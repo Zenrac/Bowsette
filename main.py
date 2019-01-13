@@ -10,6 +10,7 @@ arcadia = Client(token=arctoken)
 # You have to replace BOT_TOKEN to your bot token
 token = 'BOT_TOKEN'
 prefix = 'b!'
+admin = 240508683455299584
 
 class Bot(discord.Client):
     async def on_ready(self):
@@ -22,7 +23,7 @@ class Bot(discord.Client):
             return
 
         if message.content.startswith(prefix+'logout'):
-            if message.author.id != 240508683455299584:
+            if message.author.id != admin:
                 return await message.channel.send('⚠ You\'re not my owner.')
             else:
                 await message.channel.send('💤 I will go to sleep...')
