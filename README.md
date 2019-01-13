@@ -4,7 +4,7 @@ A simple bot using the Arcadia API
 ### Installation
 > **NOTE**: To use bowsette, you must have python3+ installed.
 
-Replace **BOT_TOKEN** by your bot token and **API_KEY** to your arcadia token
+Replace **BOT_TOKEN** to your bot token and **API_KEY** to your arcadia token
 
 ### Run Bowsette
 With python:
