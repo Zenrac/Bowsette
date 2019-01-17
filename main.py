@@ -7,11 +7,11 @@ from arcadia import Client
 from arcadia.errors import Forbidden, InvalidEndPoint
 
 arctoken = 'API_KEY'  # You have to replace API_KEY to your arcadia token
-arcadia = Client(token=arctoken)
-
 token = 'BOT_TOKEN'  # You have to replace BOT_TOKEN to your bot token
-prefix = 'b!'  # Custom prefix
+prefix = 'b!'  # You can set a custom prefix
 owner_id = 'OWNER_ID'  # You have to replace OWNER_ID to your ID
+
+arcadia = Client(token=arctoken)
 
 
 class Bot(discord.Client):
@@ -24,7 +24,7 @@ class Bot(discord.Client):
         print('Owner: {}'.format(owner_id))
 
     async def on_message(self, message):
-        if message.author == self.user:
+        if message.author.bot:
             return
 
         if not message.content.startswith(prefix):
